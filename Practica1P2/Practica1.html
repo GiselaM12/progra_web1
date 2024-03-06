@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Práctica 1</title>
+</head>
+<body>
+	<h1 align="center">Venta en línea</h1>
+	<form>
+		<fieldset>
+			<legend aling="center">Información general</legend>
+			<table align="center">
+				<tr>
+					<td>
+						<label for="nombre">Nombre:</label>
+					</td>
+					<td>
+						<label for="apellidop">Apellido Paterno:</label>
+					</td>
+					<td>
+						<label for="apellidom">Apellido Materno:</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" name="nombre" id="nombre" size="20" maxlength="20" title="Nombre" placeholder="Nombre">
+					</td>
+					<td>
+						<input type="text" name="apellidop" id="apellidop" size="20" maxlength="20" title="Apellido Paterno" placeholder="Apellido Paterno">
+					</td>
+					<td>
+						<input type="text" name="apellidom" id="apellidom" size="20" maxlength="20" title="Apellido Materno" placeholder="Apellido Materno">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="usuario">Nombre de usuario:</label>
+					</td>
+					<td>
+						<label for="pass">Contraseña:</label>
+					</td>
+					<td>
+						<label for="fechan">Fecha de nacimiento:</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" name="usuario" id="usuario" size="20" maxlength="20" title="Nombre del usuario" placeholder="Nombre del usuario">
+					</td>
+					<td>
+						<input type="password" name="pass" id="pass" size="20" title="password" placeholder="Password">
+					</td>
+					<td>
+						<input type="date" name="fechan" id="fechan" size="20">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<legend>Datos facturación</legend>
+			<table align="center" >
+				<tr>
+					<td>
+						<label>País:</label>
+					</td>
+					<td>
+						<label>Cuidad:</label>
+					</td>
+					<td>
+						<label>Calle:</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<select size="3">
+							<option value="1">México</option>
+							<option value="2">Canadá</option>
+							<option value="3">E.U.A</option>
+							<option value="4">Colombia</option>
+						</select>
+					</td>
+					<td>
+						<select size="3">
+							<option value="1">San Luis Potosí</option>
+							<option value="2">Cd. Valles</option>
+							<option value="3">Matehuala</option>
+							<option value="4">Río Verde</option>
+						</select>
+					</td>
+					<td>
+						<input type="text" name="calle" id="calle" size="15" title="calle" placeholder="Calle">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="numCas">Número de casa:</label>
+					</td>
+					<td>
+						<label for="col">Colonia:</label>
+					</td>
+					<td>
+						<label for="correo">E-mail:</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" name="numCas" id="numCas" size="20" maxlength="20" title="Número de Casa" placeholder="Número de Casa">
+					</td>
+					<td>
+						<input type="text" name="col" id="col" size="20" maxlength="20" title="Colonia" placeholder="Colonia">
+					</td>
+					<td>
+						<input type="email" name="correo" id="correo" required placeholder="Correo">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>R.F.C.</label>
+					</td>
+					<td>
+						<label>C.P.</label>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" name="rfc" id="rfc" size="20" maxlength="20" title="rfc" placeholder="R.F.C.">
+					</td>
+					<td>
+						<input type="text" name="CP" id="CP" size="20" maxlength="20" title="CP" placeholder="C.P.">
+					</td>
+					<td>
+						<input type="submit" name="Enviar" id="Enviar" value="Envíar">
+						<input type="submit" name="Enviar" id="Enviar" value="Restablecer">
+					</td>
+				</tr>
+			</table>
+
+		</fieldset>
+		
+	</form>
+
+</body>
+</html>
