@@ -1,0 +1,16 @@
+
+
+#nombre,#ap, #am, #anio, #mes, #dia, #resultado{
+    width: 65%;
+    height: 25px;
+}
+
+#boton{
+    padding: 10px;
+    background-color: #00a2ff;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    width: 65%;
+    height: 35px;
+}
