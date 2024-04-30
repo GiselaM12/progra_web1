@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario</title>
+    <link rel="stylesheet" href="estilo.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>	
+</head>
+<script>
+    var total;
+    function califica()
+        {var total=0;
+            //Evalua cada pregunta
+            for (var x=1;x<=4;x++)
+            {
+            var res=0;
+            var nom="r"+x;
+            var resul=document.getElementsByName(nom);
+            for(var i=0;i<resul.length;i++)
+            {
+                if(resul[i].checked==true)
+                    res=parseInt(resul[i].value);
+            }
+            total=total+res;
+            document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+            }
+            if(total==20)
+                document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+            else
+                if(total==15)
+                document.getElementById("comentario").innerHTML="Regular!!";
+            else
+                if(total<=15)
+                document.getElementById("comentario").innerHTML="Estudia un poco más";
+        }
+    
+     
+    function generar(){
+    
+    //Crear un objeto o instancia jsPDF
+    var doc = new jsPDF();
+    
+    //Definir el tamaño de la letra
+    doc.setFontSize(40);
+    //Color del texto
+    doc.setTextColor(9,7,121);
+    doc.text(40, 20, "Conceptos basicos");
+    doc.setTextColor(17, 122, 209); //Color en formato RGB
+    doc.setFontSize(30);
+    doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
+    doc.setTextColor(0,0,0);
+    doc.setFontSize(10);
+    doc.text(20, 50, "20 puntos. Muy bien. \r Todas tus respuestas son correctas");
+    doc.text(20, 70, "15 puntos. Regular. \r Obtuviste 2 preguntas correctas");
+    doc.text(20, 90, "0 puntos. \r Todas tus respuestas son incorrectas");
+    
+    //doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+    
+    var string = doc.output('datauristring');
+    
+    $('iframe').attr('src', string);
+    
+    }
+    </script>
+<body>
+    <div id="contiene">
+	<h1>Trivia</h1>
+	<h2>Práctica 5</h2>
+    <div id="Cuestionario">
+        <form>
+            <ul>
+
+            <li>¿De qué país es originario el queso brie?</li>
+            <input type="radio" name="r1" id="r1" value="5"/>Francia<br/>
+            <input type="radio" name="r1" id="r1" value="0"/>Italia<br/>
+            <input type="radio" name="r1" id="r1" value="0"/>Suiza<br/>
+            <input type="radio" name="r1" id="r1" value="0"/>Gran Bretaña<br/>
+
+            <li>¿Cuál es la moneda de México?</li>
+            <input type="radio" name="r2" id="r2" value="0"/>Dólar<br/>
+            <input type="radio" name="r2" id="r2" value="0"/>Euro<br/>
+            <input type="radio" name="r2" id="r2" value="5"/>Peso Mexicano<br/>
+            <input type="radio" name="r2" id="r2" value="0"/>Yen Japones<br/>
+
+            <li>¿De qué colores es la bandera de Japón?</li>
+            <input type="radio" name="r3" id="r3" value="0"/>Blanca y Azul<br/>
+            <input type="radio" name="r3" id="r3" value="5"/>Roja y Blanca<br/>
+            <input type="radio" name="r3" id="r3" value="0"/>Verde, Azul y Amarilla<br/>
+            <input type="radio" name="r3" id="r3" value="0"/>Azul y Roja<br/>
+
+            <li>¿Cómo se llamaba el marido de Frida Kahlo?</li>
+            <input type="radio" name="r4" id="r4" value="0"/>León Trotski<br/>
+            <input type="radio" name="r4" id="r4" value="0"/>André Bretón<br/>
+            <input type="radio" name="r4" id="r4" value="0"/>Nickolas Muray<br/>
+            <input type="radio" name="r4" id="r4" value="5"/>Diego Rivera<br/>
+            </ul>
+        </form>
+    </div>
+    <input id="botonC" type="button" value="Calificar" onclick="califica()">
+    <p></p>
+    <p id="total">   </p>
+    <p id="comentario">   </p>
+    <input id="botonR" type="button" onclick="generar()" value="Ver resultados"/> <br/>
+    <iframe frameborder="0" width="600" height="500"></iframe>
+    </div>
+</body>
+</html>

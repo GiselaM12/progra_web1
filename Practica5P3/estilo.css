@@ -1,0 +1,70 @@
+
+.zilla-slab-regular {
+    font-family: "Zilla Slab", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.zilla-slab-semibold {
+    font-family: "Zilla Slab", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+#contiene{
+    width: 600px;
+    height: 1000px;
+    margin: 100px 500px 0px 500px;
+    background-color: rgba(117, 117, 117, 0.336);
+    padding: 30px;
+}
+
+ul{
+    font-size: 20px;
+    font-family: "Zilla Slab", serif;
+}
+
+li{
+    padding: 20px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+#botonC{
+    background-color: rgba(19, 101, 253, 0.671);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    height: 30px;
+    width: 150px;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+    top: 30px;
+}
+
+#botonR{
+    background-color: rgba(19, 101, 253, 0.671);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    height: 35px;
+    width: 150px;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+h1{
+    color: rgb(8, 3, 3);
+    font-family: "Zilla Slab", serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+h2{
+    color: rgb(0, 0, 0);
+    font-family: "Zilla Slab", serif;
+    font-style: normal;
+    font-weight: 600;
+}
