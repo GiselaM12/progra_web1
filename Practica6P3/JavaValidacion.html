@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Validacion</title>
+</head>
+<>
+    <h2>Java Validación</h2>
+    <p>Ingresa un numero:</p>
+    <input type="number" id="id1" min="100" max="300" required>
+    <button onclick="Maxmin()">Ok</button>
+
+    <p>Si el número es mas chico de 100 o mas grande de 300, se mostrará un error</p>
+    <p id="dem"></p>
+    <br><br><br><br>
+    <p>Ingresa un número:</p>
+
+    <input type="number" id="id2" max="100">
+    <button onclick="soloMax()">OK</button>
+    <br><br><br><br>
+
+    <p>Si el numero es mayor a 100 se lanzará un error</p>
+    
+    <p id="demo"></p><br><br><br><br>
+    <p>Ingresa un numero:</p>
+    <input type="number" id="id3" min="100">
+    <button onclick="myFunction()"OK></button>
+
+    <p id="dem1"></p>
+    <p>Si el numero es mayor a 100 se lanzará un error</p>
+
+    <script>
+        function Maxmin(){
+            const inpObj = document.getElementById("id1");
+            if(!inpObj.checkValidity()){
+                document.getElementById("dem").innerHTML = inpObj.validationMessage;
+            }else{
+                document.getElementById("dem").innerHTML = "Input OK";
+            }
+        }
+
+        function soloMax(){
+            let text;
+            if(document.getElementById("id2").validity.rangeOverflow){
+                text = "El numero es demasiado grande";
+            } else {
+                text = "input OK";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+
+        function myFunction(){
+            let text = "Value OK";
+            if(document.getElementById("id3").validity.rangeOverflow){
+                text = "Value to small";
+            }
+            document.getElementById("dem1").innerHTML = text;
+        }
+    </script>
+
+
+
+
+</body>
+</html>
