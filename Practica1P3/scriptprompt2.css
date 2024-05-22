@@ -1,0 +1,28 @@
+#principal {
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    display: inline-block;
+}
+
+input[type="button"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+#tabla-container {
+    margin: 0 auto; 
+    width: 50%; 
+    text-align: center; 
+}
