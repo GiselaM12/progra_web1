@@ -15,45 +15,30 @@
     color: #fff;
     padding: 10px 0px;
     border: 2px solid #fff;
-    display: inline-block;
+    display: none;
 }
 
 nav{
     background: rebeccapurple;
-    padding: 10px;
-    display: none;
-    flex-direction: column;
+    padding: 10px ;
+    display: flex;
+    justify-content: space-around;
 }
 
-/* Estilos para pantallas pequeñas */
-@media (max-width: 600px){
-    .nav-boton{
-        display: inline-block;
-    }
+
+@media (min-width: 600px){
     nav{
-        display: none;
+        background: black;
+        flex-direction: column;
     }
     .new-enlace{
-        display: block;
         margin: 10px 0px;
+    }
+
+    .nav-boton{
+        display: inline-block;
     }
     .desaparece{
         display: none;
-    }
-}
-
-/* Estilos para pantallas grandes */
-@media (min-width: 600px){
-    .nav-boton{
-        display: none;
-    }
-    nav{
-        background: black;
-        display: flex;
-        justify-content: space-around;
-    }
-    .new-enlace{
-        display: inline-block;
-        margin: 0;
     }
 }
