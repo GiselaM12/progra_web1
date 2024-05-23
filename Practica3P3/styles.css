@@ -15,35 +15,45 @@
     color: #fff;
     padding: 10px 0px;
     border: 2px solid #fff;
-    display: none;
+    display: inline-block;
 }
 
 nav{
     background: rebeccapurple;
-    padding: 10px ;
-    display: flex;
-    justify-content: space-around;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
 }
 
-
-@media (min-width: 600px){
-    nav{
-        background: black;
-        flex-direction: column;
-    }
-    .new-enlace{
-        margin: 10px 0px;
-    }
-
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px){
     .nav-boton{
         display: inline-block;
+    }
+    nav{
+        display: none;
+    }
+    .new-enlace{
+        display: block;
+        margin: 10px 0px;
     }
     .desaparece{
         display: none;
     }
 }
 
-
-
-
-
+/* Estilos para pantallas grandes */
+@media (min-width: 600px){
+    .nav-boton{
+        display: none;
+    }
+    nav{
+        background: black;
+        display: flex;
+        justify-content: space-around;
+    }
+    .new-enlace{
+        display: inline-block;
+        margin: 0;
+    }
+}
